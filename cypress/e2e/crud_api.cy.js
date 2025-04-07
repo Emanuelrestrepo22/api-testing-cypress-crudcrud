@@ -43,4 +43,14 @@ describe('🧪 TS01 - API Testing - Modularizado con helpers', () => {
       });
     });
   });
+  it('TS01-TC04. Eliminar el usuario', () => {
+    helpers.createUser(user.initial).then((res) => {
+      userId = res.body._id;
+
+      helpers.deleteUser(userId).then((res) => {
+        expect(res.status).to.eq(200); // CrudCrud responde 200 OK si fue eliminado correctamente
+        cy.log('Usuario eliminado con éxito:', userId);
+      });
+    });
+  });
 });
