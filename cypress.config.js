@@ -1,9 +1,13 @@
-const { defineConfig } = require("cypress");
+require('dotenv').config(); // carga las variables desde .env
 
-module.exports = defineConfig({
+module.exports = {
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    baseUrl: `https://crudcrud.com/api/${process.env.API_KEY}`,
+    env: {
+      apiKey: process.env.API_KEY
     },
-  },
-});
+    setupNodeEvents(on, config) {
+      return config;
+    }
+  }
+};
