@@ -25,4 +25,22 @@ describe('🧪 TS01 - API Testing - Modularizado con helpers', () => {
       });
     });
   });
+
+  it('TS01-TC03. Actualizar los datos del usuario', () => {
+    helpers.createUser(user.initial).then((res) => {
+      userId = res.body._id;
+
+      helpers.updateUser(userId, user.updated).then((res) => {
+        // PUT en CrudCrud responde con 200 sin cuerpo
+        expect(res.status).to.eq(200);
+
+        // Para validar los cambios hacemos un GET
+        helpers.getUser(userId).then((res) => {
+          expect(res.status).to.eq(200);
+          expect(res.body.name).to.eq(user.updated.name);
+          expect(res.body.job).to.eq(user.updated.job);
+        });
+      });
+    });
+  });
 });
