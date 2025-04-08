@@ -24,3 +24,10 @@ export const getDeletedUser = (userId) => {
     failOnStatusCode: false
   });
 };
+
+export const validateUserSchema = (body, expectedUser) => {
+  expect(body).to.have.all.keys('_id', 'name', 'job');
+  expect(body.name).to.eq(expectedUser.name);
+  expect(body.job).to.eq(expectedUser.job);
+};
+
