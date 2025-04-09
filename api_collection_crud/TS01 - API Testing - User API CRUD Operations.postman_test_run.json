@@ -1,0 +1,289 @@
+{
+	"id": "61ffac26-b945-4d75-83be-3ed9905e0b10",
+	"name": "TS01 - API Testing - User API CRUD Operations",
+	"timestamp": "2025-04-08T17:01:42.523Z",
+	"collection_id": "30637298-66344983-f64a-4564-aba4-86a22d0dcf57",
+	"folder_id": 0,
+	"environment_id": "30637298-5767e676-d02e-4f04-9174-c521cb980215",
+	"totalPass": 23,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2025-04-08T17:01:38.956Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b8eb0c02-18cf-40a2-8d20-f331af0823eb",
+			"name": "TC01. Crear un nuevo usuario",
+			"url": "https://crudcrud.com/api//users",
+			"time": 1155,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required fields - name, job, and _id": true,
+				"Name and Job fields are valid non-empty strings": true,
+				"Response time is under 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - name, job, and _id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name and Job fields are valid non-empty strings": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is under 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1155
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required fields - name, job, and _id": true,
+					"Name and Job fields are valid non-empty strings": true,
+					"Response time is under 500ms": true
+				}
+			]
+		},
+		{
+			"id": "62b68a94-0c21-4073-af8e-a008ba0823e9",
+			"name": "TC02. Validar que el usuario fue creado",
+			"url": "https://crudcrud.com/api/0f1f2c2ca903415d87d7cfb6e77d0c3c/users/67f556765bbdf403e81e9da2",
+			"time": 253,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is within an acceptable range": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields _id, name, and job": true,
+				"Validate the data type of _id, name, and job fields": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields _id, name, and job": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the data type of _id, name, and job fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				253
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is within an acceptable range": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields _id, name, and job": true,
+					"Validate the data type of _id, name, and job fields": true
+				}
+			]
+		},
+		{
+			"id": "a1bad689-c591-4af9-9523-cdb3220b1eba",
+			"name": "TC03. Actualizar los datos del usuario",
+			"url": "https://crudcrud.com/api/0f1f2c2ca903415d87d7cfb6e77d0c3c/users/67f556765bbdf403e81e9da2",
+			"time": 252,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response body is empty (No Content)": true,
+				"Content-Length header is 0": true,
+				"Response time is under 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is empty (No Content)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Length header is 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is under 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				252
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response body is empty (No Content)": true,
+					"Content-Length header is 0": true,
+					"Response time is under 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "82d06e05-1055-488b-b474-c8e905e86423",
+			"name": "TC04.Verificar la actualización del usuario",
+			"url": "https://crudcrud.com/api/0f1f2c2ca903415d87d7cfb6e77d0c3c/users/67f556765bbdf403e81e9da2",
+			"time": 254,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is within an acceptable range": true,
+				"Content-Type header is application/json": true,
+				"Response has the required fields _id, name, and job": true,
+				"Validate the data type of _id, name, and job fields": true,
+				"User data matches the updated values": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields _id, name, and job": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the data type of _id, name, and job fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User data matches the updated values": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				254
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is within an acceptable range": true,
+					"Content-Type header is application/json": true,
+					"Response has the required fields _id, name, and job": true,
+					"Validate the data type of _id, name, and job fields": true,
+					"User data matches the updated values": true
+				}
+			]
+		},
+		{
+			"id": "5f1b2169-c04e-46ea-9709-6a700915574f",
+			"name": "TC05.Eliminar el usuario",
+			"url": "https://crudcrud.com/api/0f1f2c2ca903415d87d7cfb6e77d0c3c/users/67f556765bbdf403e81e9da2",
+			"time": 250,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200 or 204": true,
+				"Response time is under 1000ms": true,
+				"Content-Length is 0 or not present": true,
+				"Response body is empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200 or 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is under 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Length is 0 or not present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				250
+			],
+			"allTests": [
+				{
+					"Response status code is 200 or 204": true,
+					"Response time is under 1000ms": true,
+					"Content-Length is 0 or not present": true,
+					"Response body is empty": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2164,
+	"collection": {
+		"requests": [
+			{
+				"id": "b8eb0c02-18cf-40a2-8d20-f331af0823eb",
+				"method": "POST"
+			},
+			{
+				"id": "62b68a94-0c21-4073-af8e-a008ba0823e9",
+				"method": "GET"
+			},
+			{
+				"id": "a1bad689-c591-4af9-9523-cdb3220b1eba",
+				"method": "PUT"
+			},
+			{
+				"id": "82d06e05-1055-488b-b474-c8e905e86423",
+				"method": "GET"
+			},
+			{
+				"id": "5f1b2169-c04e-46ea-9709-6a700915574f",
+				"method": "DELETE"
+			},
+			{
+				"id": "8f3d6ee9-7430-48a5-bebb-7413f67d4057",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -30,4 +30,3 @@ export const validateUserSchema = (body, expectedUser) => {
   expect(body.name).to.eq(expectedUser.name);
   expect(body.job).to.eq(expectedUser.job);
 };
-
